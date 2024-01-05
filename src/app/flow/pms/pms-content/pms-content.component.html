@@ -1,0 +1,291 @@
+<div class="content-outer-wrapper d-flex justify-content-start">
+  <!-- <div class="container-fluid "> -->
+  <!-- <div class="row"> -->
+  <!-- <div class="col-md-2"></div> -->
+  <div class="col-md-12">
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="content-wrapper">
+            <div class="content-inner-wrapper">
+              <div class="row">
+                <div class="section1 col">
+                  <h2>Inpatient : Patient is Admitted</h2>
+                  <h3>Ward nurse assesses the patient at bed</h3>
+                  <h4><span>Performer :</span> Ward Nurse</h4>
+
+                  <div class="my-4 carimg">
+                    <img
+                      src="../../../../assets/iMedOne-Flow/Patient Assessment at Ward.jpg"
+                      class=""
+                    />
+                  </div>
+
+                  <!-- <div class="text-center mt-3">
+                              <button class="btnpink"><a href="#" data-bs-toggle="modal" data-bs-target="#videoModal">Watch Video</a></button> 
+                           </div> -->
+
+                  <div class="steps">
+                    <h3 class="mb-3">Steps :</h3>
+                    <ul class="list-unstyled ps-5">
+                      <li class="mb-2">
+                        <a
+                          class=""
+                          href="#"
+                          data-bs-toggle="modal"
+                          data-bs-target="#patientAssesment"
+                          >Patient assessment note</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a class="" href="#">Patient assessment note</a>
+                      </li>
+                      <li class="mb-2">
+                        <a class="" href="#">Patient assessment note</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!--  <div class="text-center mt-3">
+                             <button class="btnpink"><a href="#" data-bs-toggle="modal" data-bs-target="#videoModal1">Watch Video</a></button> 
+                          </div> -->
+                <div class="section2 col">
+                  <ul class="nav nav-tabs">
+                    <li class="nav-item btntab">
+                      <a
+                        class="nav-link"
+                        [class.active]="activeTab === 'video'"
+                        [ngClass]="{ 'youtube-active': activeTab === 'video' }"
+                        (click)="setActiveTab('video')"
+                        >YouTube</a
+                      >
+                    </li>
+                    <li class="nav-item btntab">
+                      <a
+                        class="nav-link"
+                        [class.active]="activeTab === 'local'"
+                        [ngClass]="{ 'videos-active': activeTab === 'local' }"
+                        (click)="setActiveTab('local')"
+                        >Videos</a
+                      >
+                    </li>
+                  </ul>
+
+                  <div class="videobg">
+                    <div *ngIf="activeTab === 'video'" class="video" id="video">
+                      <div class="video-container">
+                        <!-- Replace the URL in the src attribute with your video URL -->
+                        <iframe
+                          src="https://www.youtube.com/embed/5FArRrpcyLo"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                      <div class="video-container">
+                        <!-- Replace the URL in the src attribute with your video URL -->
+                        <iframe
+                          src="https://www.youtube.com/embed/5FArRrpcyLo"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                      <div class="video-container">
+                        <!-- Replace the URL in the src attribute with your video URL -->
+                        <iframe
+                          src="https://www.youtube.com/embed/5FArRrpcyLo"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- another tab -->
+
+                  <div *ngIf="activeTab === 'local'" class="local" id="local">
+                    <div class="video-container">
+                      <!-- Replace the URL in the src attribute with your video URL -->
+                      <video width="100%" height="315" controls>
+                        <source
+                          src="/assets/videos/pmsVid.mp4"
+                          type="video/mp4"
+                        />
+                        Your browser does not support the video tag.
+                      </video>
+                      <div class="video-title">
+                        <h4>Graphics Simple Animation</h4>
+                      </div>
+                    </div>
+                    <div class="video-container">
+                      <!-- Replace the URL in the src attribute with your video URL -->
+                      <video width="100%" height="315" controls>
+                        <source
+                          src="/assets/videos/pmsVid.mp4"
+                          type="video/mp4"
+                        />
+                        Your browser does not support the video tag.
+                      </video>
+                      <div class="video-title">
+                        <h4>Graphics Simple Animation</h4>
+                      </div>
+                    </div>
+                    <div class="video-container">
+                      <!-- Replace the URL in the src attribute with your video URL -->
+                      <video width="100%" height="315" controls>
+                        <source
+                          src="/assets/videos/pmsVid.mp4"
+                          type="video/mp4"
+                        />
+                        Your browser does not support the video tag.
+                      </video>
+                      <div class="video-title">
+                        <h4>Graphics Simple Animation</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="content-wrapper">
+            <div class="content-inner-wrapper">
+              <h2>Inpatient : Patient is Admitted</h2>
+              <h3>Ward nurse assesses the patient at bed</h3>
+              <h4><span>Performer :</span> Ward Nurse</h4>
+
+              <div class="my-4 text-center">
+                <img
+                  src="../../../../assets/iMedOne-Flow/Patient Assessment at Ward.jpg"
+                  class=""
+                />
+              </div>
+
+              <div class="text-center mt-3">
+                <button class="btnpink">
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#videoModal"
+                    >Watch Video</a
+                  >
+                </button>
+              </div>
+              <div class="steps">
+                <h3 class="mb-3">Steps :</h3>
+                <ul class="list-unstyled ps-5">
+                  <li class="mb-2">
+                    <a class="" href="#">Patient assessment note</a>
+                  </li>
+                  <li class="mb-2">
+                    <a class="" href="#">Patient assessment note</a>
+                  </li>
+                  <li class="mb-2">
+                    <a class="" href="#">Patient assessment note</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="content-wrapper">
+            <div class="content-inner-wrapper">
+              <h2>Inpatient : Patient is Admitted</h2>
+              <h3>Ward nurse assesses the patient at bed</h3>
+              <h4><span>Performer :</span> Ward Nurse</h4>
+
+              <div class="my-4 text-center">
+                <img
+                  src="../../../../assets/iMedOne-Flow/Patient Assessment at Ward.jpg"
+                  class=""
+                />
+              </div>
+
+              <div class="text-center mt-3">
+                <button class="btnpink">
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#videoModal"
+                    >Watch Video</a
+                  >
+                </button>
+              </div>
+              <div class="steps">
+                <h3 class="mb-3">Steps :</h3>
+                <ul class="list-unstyled ps-5">
+                  <li class="mb-2">
+                    <a class="" href="#">Patient assessment note</a>
+                  </li>
+                  <li class="mb-2">
+                    <a class="" href="#">Patient assessment note</a>
+                  </li>
+                  <li class="mb-2">
+                    <a class="" href="#">Patient assessment note</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"
+          ><i class="bi bi-chevron-left"></i
+        ></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"
+          ><i class="bi bi-chevron-right"></i
+        ></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- </div> -->
+
+  <!-- </div> -->
+  <div></div>
+</div>
