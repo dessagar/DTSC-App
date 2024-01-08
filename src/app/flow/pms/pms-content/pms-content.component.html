@@ -1,5 +1,5 @@
 <div class="content-outer-wrapper d-flex justify-content-start">
-  <!-- <div class="container-fluid "> -->
+  <div class="container-fluid ">
   <!-- <div class="row"> -->
   <!-- <div class="col-md-2"></div> -->
   <div class="col-md-12">
@@ -31,6 +31,9 @@
         ></button>
       </div>
       <div class="carousel-inner">
+
+        <!-- 1st slide of carousel -->
+
         <div class="carousel-item active">
           <div class="content-wrapper">
             <div class="content-inner-wrapper">
@@ -46,10 +49,6 @@
                       class=""
                     />
                   </div>
-
-                  <!-- <div class="text-center mt-3">
-                              <button class="btnpink"><a href="#" data-bs-toggle="modal" data-bs-target="#videoModal">Watch Video</a></button> 
-                           </div> -->
 
                   <div class="steps">
                     <h3 class="mb-3">Steps :</h3>
@@ -73,108 +72,105 @@
                   </div>
                 </div>
 
-                <!--  <div class="text-center mt-3">
-                             <button class="btnpink"><a href="#" data-bs-toggle="modal" data-bs-target="#videoModal1">Watch Video</a></button> 
-                          </div> -->
                 <div class="section2 col">
-                  <ul class="nav nav-tabs">
-                    <li class="nav-item btntab">
-                      <a
-                        class="nav-link"
-                        [class.active]="activeTab === 'video'"
-                        [ngClass]="{ 'youtube-active': activeTab === 'video' }"
-                        (click)="setActiveTab('video')"
-                        >YouTube</a
-                      >
+                  <div class="flow-subheader ">
+                  <div class="flow-subheader-inner text-center d-inline-block p-2">
+                  <ul class="nav nav-pills">
+                    <li class="nav-item me-3">
+                      <button class="nav-link" [class.active]="activeTab === 'video'" (click)="setActiveTab('video')">External Resource</button>
                     </li>
-                    <li class="nav-item btntab">
-                      <a
-                        class="nav-link"
-                        [class.active]="activeTab === 'local'"
-                        [ngClass]="{ 'videos-active': activeTab === 'local' }"
-                        (click)="setActiveTab('local')"
-                        >Videos</a
-                      >
+                    <li class="nav-item me-3">
+                      <button class="nav-link" [class.active]="activeTab === 'local'" (click)="setActiveTab('local')">Internal Resource</button>
                     </li>
-                  </ul>
+                  </ul> 
+                  </div>  
+                  </div>               
 
                   <div class="videobg">
-                    <div *ngIf="activeTab === 'video'" class="video" id="video">
+                    <div class="video" *ngIf="activeTab === 'video'">
                       <div class="video-container">
-                        <!-- Replace the URL in the src attribute with your video URL -->
-                        <iframe
-                          src="https://www.youtube.com/embed/5FArRrpcyLo"
-                          frameborder="0"
-                          allowfullscreen
-                        ></iframe>
+                        <div class="card" style="width: 30rem;">
+                          <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5FArRrpcyLo" allowfullscreen></iframe>
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          </div>
+                        </div>                        
                       </div>
                       <div class="video-container">
-                        <!-- Replace the URL in the src attribute with your video URL -->
-                        <iframe
-                          src="https://www.youtube.com/embed/5FArRrpcyLo"
-                          frameborder="0"
-                          allowfullscreen
-                        ></iframe>
+                        <div class="card" style="width: 30rem;">
+                          <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5FArRrpcyLo" allowfullscreen></iframe>
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          </div>
+                        </div>                        
                       </div>
                       <div class="video-container">
-                        <!-- Replace the URL in the src attribute with your video URL -->
-                        <iframe
-                          src="https://www.youtube.com/embed/5FArRrpcyLo"
-                          frameborder="0"
-                          allowfullscreen
-                        ></iframe>
+                        <div class="card" style="width: 30rem;">
+                          <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5FArRrpcyLo" allowfullscreen></iframe>
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          </div>
+                        </div>                        
                       </div>
                     </div>
                   </div>
 
-                  <!-- another tab -->
-
-                  <div *ngIf="activeTab === 'local'" class="local" id="local">
+                  <div class="localbg">
+                  <div class="local" *ngIf="activeTab === 'local'">
                     <div class="video-container">
-                      <!-- Replace the URL in the src attribute with your video URL -->
-                      <video width="100%" height="315" controls>
-                        <source
-                          src="/assets/videos/pmsVid.mp4"
-                          type="video/mp4"
-                        />
-                        Your browser does not support the video tag.
-                      </video>
-                      <div class="video-title">
-                        <h4>Graphics Simple Animation</h4>
+                      <div class="card" style="width: 30rem;">
+                        <video class="card-img-top" width="100%" height="180" controls>
+                          <source src="assets/videos/iMedOnePms.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>                    
+                    </div>
+                    <div class="video-container">
+                      <div class="card" style="width: 30rem;">
+                        <video class="card-img-top" width="100%" height="180" controls>
+                          <source src="assets/videos/iMedOnePms.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
                       </div>
                     </div>
                     <div class="video-container">
-                      <!-- Replace the URL in the src attribute with your video URL -->
-                      <video width="100%" height="315" controls>
-                        <source
-                          src="/assets/videos/pmsVid.mp4"
-                          type="video/mp4"
-                        />
-                        Your browser does not support the video tag.
-                      </video>
-                      <div class="video-title">
-                        <h4>Graphics Simple Animation</h4>
+                      <div class="card" style="width: 30rem;">
+                        <video class="card-img-top" width="100%" height="180" controls>
+                          <source src="assets/videos/iMedOnePms.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
                       </div>
                     </div>
-                    <div class="video-container">
-                      <!-- Replace the URL in the src attribute with your video URL -->
-                      <video width="100%" height="315" controls>
-                        <source
-                          src="/assets/videos/pmsVid.mp4"
-                          type="video/mp4"
-                        />
-                        Your browser does not support the video tag.
-                      </video>
-                      <div class="video-title">
-                        <h4>Graphics Simple Animation</h4>
-                      </div>
-                    </div>
+                  </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- 2nd slide of carousel -->
         <div class="carousel-item">
           <div class="content-wrapper">
             <div class="content-inner-wrapper">
@@ -216,6 +212,9 @@
             </div>
           </div>
         </div>
+
+        <!-- 3rd slide of carousel -->
+
         <div class="carousel-item">
           <div class="content-wrapper">
             <div class="content-inner-wrapper">
@@ -286,6 +285,5 @@
 
   <!-- </div> -->
 
-  <!-- </div> -->
-  <div></div>
+</div>
 </div>
