@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 
@@ -33,6 +33,10 @@ import { TestFlowComponent } from './flow/test/test-flow/test-flow.component';
 import { chatQuestionComponent } from './chatQuestion/chatQuestion.component';
 import { Admin_dashboardComponent } from './admin_dashboard/admin_dashboard.component'
 import { ClangComponent } from './clang/clang.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { AdminModuleComponent } from './admin-module/admin-module.component';
+import { EditSlideComponent } from './edit-slide/edit-slide.component';
+import { CreateSlideComponent } from './create-slide/create-slide.component';
 
 
 
@@ -63,8 +67,11 @@ import { ClangComponent } from './clang/clang.component';
     Admin_dashboardComponent,
     chatQuestionComponent,
     ClangComponent,
-    TestFlowComponent
-   
+    TestFlowComponent,
+    CarouselComponent,
+    AdminModuleComponent,
+    EditSlideComponent,
+    CreateSlideComponent,
   
   ],
   imports: [

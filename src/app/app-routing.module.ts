@@ -25,6 +25,11 @@ import { ChatbotComponent } from './chatbot/chatbot.component';
 import { chatQuestionComponent } from './chatQuestion/chatQuestion.component';
 import { Admin_dashboardComponent } from './admin_dashboard/admin_dashboard.component';
 import { ClangComponent } from './clang/clang.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { AdminModuleComponent } from './admin-module/admin-module.component';
+import { EditSlideComponent } from './edit-slide/edit-slide.component';
+import { CreateSlideComponent } from './create-slide/create-slide.component';
+
 
 
 
@@ -55,9 +60,11 @@ const routes: Routes = [
   {path:'chatQuestion',component:chatQuestionComponent},
   {path:'amsContentPage',component:AmsContentComponent},
   {path: 'clangpage', component:ClangComponent},
-  {path:'Admin_dashboardComponent',component:Admin_dashboardComponent}
-
-
+  {path:'Admin_dashboardComponent',component:Admin_dashboardComponent},
+  {path:'carousel',component:CarouselComponent},
+  {path:'adminmodule',component:AdminModuleComponent},
+  {path:'editslide',component:EditSlideComponent},
+  {path:'createslide',component:CreateSlideComponent}
 ];
 
 @NgModule({
@@ -65,3 +72,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

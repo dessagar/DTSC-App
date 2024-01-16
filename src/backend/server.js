@@ -101,6 +101,45 @@ app.post('/questions/:id/reply', async (req, res) => {
   }
 });
 
+// Add this to your server.js or relevant file
+const slideSchema = new mongoose.Schema({
+  title: String,
+  subtitle: String,
+  performer: String,
+  image: String,
+  externalVideos: [
+    {
+      videoTitle: String,
+      videoDescription: String,
+      youtubeUrl: String,
+    },
+  ],
+  internalVideos: [
+    {
+      videoTitle: String,
+      videoDescription: String,
+      localVideoFile: String,
+    },
+  ],
+  selectedModules: [String],
+  timestamp: { type: Date, default: Date.now },
+});
+
+const SlideModel = mongoose.model('Slide', slideSchema);
+// ...
+
+app.post('/slides', async (req, res) => {
+  const slideData = req.body;
+
+  try {
+    const newSlide = await SlideModel.create(slideData);
+    res.status(201).json(newSlide);
+  } catch (error) {
+    console.error('Error adding slide:', error);
+    res.status(500).json({ message: 'Internal Server Error' });
+  }
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });

@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
 import { TitleService } from './title.service'; // Update the path
 
-
-
-
-
 @Component({
   selector: 'app-admin_dashboard',
   templateUrl: './admin_dashboard.component.html',
